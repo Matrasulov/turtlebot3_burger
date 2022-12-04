@@ -467,6 +467,116 @@ ubuntu@ubuntu:~/opencr_update$
 
 ```
 
+<img width="1440" alt="image" src="https://user-images.githubusercontent.com/76453238/205494727-34a9fede-e3f8-4c9e-8221-ac271f01d0f7.png">
 
 ```
-xx
+akbarjon@ubuntu:~$ ssh ubuntu@172.20.10.4
+ubuntu@172.20.10.4's password: 
+Welcome to Ubuntu 20.04.3 LTS (GNU/Linux 5.4.0-1077-raspi aarch64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Sun 04 Dec 2022 01:04:58 PM UTC
+
+  System load:  0.42               Temperature:            56.0 C
+  Usage of /:   53.4% of 14.32GB   Processes:              153
+  Memory usage: 14%                Users logged in:        1
+  Swap usage:   0%                 IPv4 address for wlan0: 172.20.10.4
+
+ * Strictly confined Kubernetes makes edge and IoT secure. Learn how MicroK8s
+   just raised the bar for easy, resilient and secure K8s cluster deployment.
+
+   https://ubuntu.com/engage/secure-kubernetes-at-the-edge
+
+300 updates can be applied immediately.
+2 of these updates are standard security updates.
+To see these additional updates run: apt list --upgradable
+
+New release '22.04.1 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+
+Last login: Sun Dec  4 13:00:45 2022 from 172.20.10.10
+ubuntu@ubuntu:~$ ros2 topic list
+/battery_state
+/cmd_vel
+/imu
+/joint_states
+/magnetic_field
+/odom
+/parameter_events
+/robot_description
+/rosout
+/scan
+/sensor_state
+/tf
+/tf_static
+ubuntu@ubuntu:~$ ros2 service list
+/diff_drive_controller/describe_parameters
+/diff_drive_controller/get_parameter_types
+/diff_drive_controller/get_parameters
+/diff_drive_controller/list_parameters
+/diff_drive_controller/set_parameters
+/diff_drive_controller/set_parameters_atomically
+/ld08_driver/describe_parameters
+/ld08_driver/get_parameter_types
+/ld08_driver/get_parameters
+/ld08_driver/list_parameters
+/ld08_driver/set_parameters
+/ld08_driver/set_parameters_atomically
+/motor_power
+/reset
+/robot_state_publisher/describe_parameters
+/robot_state_publisher/get_parameter_types
+/robot_state_publisher/get_parameters
+/robot_state_publisher/list_parameters
+/robot_state_publisher/set_parameters
+/robot_state_publisher/set_parameters_atomically
+/sound
+/turtlebot3_node/describe_parameters
+/turtlebot3_node/get_parameter_types
+/turtlebot3_node/get_parameters
+/turtlebot3_node/list_parameters
+/turtlebot3_node/set_parameters
+/turtlebot3_node/set_parameters_atomically
+
+
+ubuntu@ubuntu:~$ export TURTLEBOT3_MODEL=${TB3_MODEL}
+ubuntu@ubuntu:~$ ros2 run turtlebot3_teleop teleop_keyboard
+
+Control Your TurtleBot3!
+---------------------------
+Moving around:
+        w
+   a    s    d
+        x
+
+w/x : increase/decrease linear velocity (Burger : ~ 0.22, Waffle and Waffle Pi : ~ 0.26)
+a/d : increase/decrease angular velocity (Burger : ~ 2.84, Waffle and Waffle Pi : ~ 1.82)
+
+space key, s : force stop
+
+CTRL-C to quit
+
+currently:	linear velocity 0.0	 angular velocity 0.0 
+currently:	linear velocity 0.0	 angular velocity 0.0 
+
+
+Control Your TurtleBot3!
+---------------------------
+Moving around:
+        w
+   a    s    d
+        x
+
+w/x : increase/decrease linear velocity (Burger : ~ 0.22, Waffle and Waffle Pi : ~ 0.26)
+a/d : increase/decrease angular velocity (Burger : ~ 2.84, Waffle and Waffle Pi : ~ 1.82)
+
+space key, s : force stop
+
+CTRL-C to quit
+
+
+```
